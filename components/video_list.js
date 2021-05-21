@@ -31,8 +31,8 @@ class VideoList extends Component {
     this.fetchData();
   }
 
-  fetchData() {
-    youtubeSearch(this.state.query)
+  fetchData(query) {
+    youtubeSearch(query)
       .then((responseData) => {
         this.setState({
           dataSource: responseData,
